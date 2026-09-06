@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bosq — The mindful space for clarity and flow</title>
+  <meta name="description" content="bosq is your quiet, beautifully crafted sanctuary for thoughts, focus, and purposeful living. Available across all your devices at bosq.app.">
+  <meta name="keywords" content="bosq, bosq app, productivity, mindfulness, notes, personal space, quiet software">
+  <meta name="author" content="bosq">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bosq.app/">
+  <meta property="og:title" content="bosq — The mindful space for clarity and flow">
+  <meta property="og:description" content="A tranquil, beautifully crafted sanctuary for thoughts, focus, and everyday flow.">
+  <meta property="og:image" content="https://bosq.app/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="bosq — The mindful space for clarity and flow">
+  <meta name="twitter:description" content="A tranquil, beautifully crafted sanctuary for thoughts, focus, and everyday flow.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%236366f1'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' font-family='cursive' font-size='42' fill='white'>b</text></svg>">
+
+  <!-- Google Fonts: Marck Script (for titles) & Plus Jakarta Sans (for interface/body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" aria-label="bosq home">
+        <span class="logo-symbol">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 14.5C9 11.5 11.5 9 14.5 9C17 9 19 11 19 13.5C19 17 15 19 14 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="14" cy="14" r="2.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-name font-script">bosq</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#showcase" class="nav-link">Experience</a></li>
+          <li><a href="#stories" class="nav-link">Stories</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="#download" class="btn btn-primary nav-cta">Get the App</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Welcome to the future of digital calm</span>
+          </div>
+
+          <h1 class="hero-title font-script">
+            Find your pace with <span class="text-gradient">bosq</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            A quiet, meticulously designed space crafted for your thoughts, daily rituals, and unobstructed creative flow. Pure focus, zero clutter.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#download" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.66 1.38-.56.64-1.06 1.7-0.92 2.73 1.05.08 2.07-.53 2.66-1.24z"/>
+              </svg>
+              <span>Download for iOS</span>
+            </a>
+            <a href="#download" class="btn btn-outline btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.61-.954V2.768c.14-.366.353-.695.609-.954zm11.24 11.24l2.13 2.13-11.832 6.745 9.702-8.875zm0-2.108L5.147 2.071l11.832 6.745-2.13 2.13zm1.489 1.054l3.197-1.822c.983-.56.983-1.472 0-2.032l-3.197-1.822-2.33 2.33 2.33 2.346z"/>
+              </svg>
+              <span>Get on Android</span>
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-avatars">
+              <span class="avatar" style="background:#f43f5e">R</span>
+              <span class="avatar" style="background:#6366f1">A</span>
+              <span class="avatar" style="background:#10b981">M</span>
+              <span class="avatar" style="background:#f59e0b">K</span>
+            </div>
+            <div class="trust-text">
+              <div class="stars">★★★★★</div>
+              <span>Loved by mindful thinkers & creators</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="device-frame">
+            <div class="device-glow"></div>
+            <div class="device-screen">
+              <!-- Simulated App UI inside phone/tablet -->
+              <div class="app-mockup-header">
+                <span class="app-status-time">09:41</span>
+                <div class="app-notch"></div>
+                <div class="app-status-icons">
+                  <span>5G</span>
+                  <span>100%</span>
+                </div>
+              </div>
+
+              <div class="app-mockup-body">
+                <div class="app-header-row">
+                  <div>
+                    <p class="app-greet font-script">Good morning,</p>
+                    <h3 class="app-headline">Your calm space</h3>
+                  </div>
+                  <div class="app-avatar-badge">B</div>
+                </div>
+
+                <div class="app-card highlight-card">
+                  <div class="app-card-tag">Daily Ritual</div>
+                  <h4 class="app-card-title">Morning Reflection</h4>
+                  <p class="app-card-desc">"Breathe. The noise of the world ends where your focus begins."</p>
+                  <div class="app-progress-bar"><div class="bar-fill"></div></div>
+                </div>
+
+                <div class="app-quick-grid">
+                  <div class="app-grid-tile active">
+                    <div class="tile-icon">🌿</div>
+                    <span class="tile-title">Clarity</span>
+                    <span class="tile-sub">24 min</span>
+                  </div>
+                  <div class="app-grid-tile">
+                    <div class="tile-icon">✍️</div>
+                    <span class="tile-title">Journal</span>
+                    <span class="tile-sub">3 entries</span>
+                  </div>
+                  <div class="app-grid-tile">
+                    <div class="tile-icon">☕</div>
+                    <span class="tile-title">Spaces</span>
+                    <span class="tile-sub">Saved</span>
+                  </div>
+                </div>
+
+                <div class="app-card secondary-card">
+                  <div class="card-row">
+                    <div class="bullet-dot"></div>
+                    <div>
+                      <p class="card-title-sm">Sync with bosq cloud</p>
+                      <p class="card-desc-sm">End-to-end encrypted across devices</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating UI Badges -->
+              <div class="floating-badge badge-top-left">
+                <span class="badge-icon">⚡</span>
+                <div>
+                  <strong>Instant Sync</strong>
+                  <small>Always up to date</small>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-right">
+                <span class="badge-icon">🛡️</span>
+                <div>
+                  <strong>Zero Tracking</strong>
+                  <small>100% Private</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-why" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Philosophy</span>
+          <h2 class="section-title font-script">Why choose bosq?</h2>
+          <p class="section-subtitle">
+            Most modern apps fight for your attention. bosq gives it back to you.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Pure, Distraction-Free Flow</h3>
+            <p class="feature-desc">
+              Stripped of ads, noisy notification badges, and algorithm feeds. Designed specifically so your thoughts have space to breathe.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Privacy by Design</h3>
+            <p class="feature-desc">
+              Your thoughts belong only to you. Encrypted storage with zero data brokering, zero profiling, and client-first security.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Fast & Frictionless</h3>
+            <p class="feature-desc">
+              Opens in milliseconds. Works fully offline when you are off the grid, and syncs automatically the moment you reconnect.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="feature-title">Aesthetic Craftsmanship</h3>
+            <p class="feature-desc">
+              Carefully tuned typography, tactile soundscapes, and calming motion make interacting with bosq a joyful daily habit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Showcase Section -->
+    <section class="section section-showcase" id="showcase">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Experience</span>
+          <h2 class="section-title font-script">Designed for every moment</h2>
+          <p class="section-subtitle">
+            Explore how bosq adapts seamlessly to your thoughts, creative sessions, and peaceful downtime.
+          </p>
+        </div>
+
+        <div class="showcase-tabs">
+          <button class="tab-btn active" data-tab="focus">Focus Mode</button>
+          <button class="tab-btn" data-tab="spaces">Inspiring Spaces</button>
+          <button class="tab-btn" data-tab="notes">Deep Reflection</button>
+          <button class="tab-btn" data-tab="sync">Universal Sync</button>
+        </div>
+
+        <div class="showcase-display">
+          <div class="tab-content active" id="tab-focus">
+            <div class="showcase-card">
+              <div class="showcase-text">
+                <span class="pill-mini">Mindful Work</span>
+                <h3 class="font-script">Immerse yourself without interruption</h3>
+                <p>
+                  Activate Focus Mode to gently silence all non-essential stimuli. bosq creates an ambient visual landscape that lets you dive straight into deep work.
+                </p>
+                <ul class="checklist">
+                  <li><span>✓</span> Customizable gentle ambient soundscapes</li>
+                  <li><span>✓</span> Minimalist timer and gentle progress tracking</li>
+                  <li><span>✓</span> Automatic status signaling to your team</li>
+                </ul>
+              </div>
+              <div class="showcase-graphic focus-visual">
+                <div class="zen-circle">
+                  <span class="zen-number">25:00</span>
+                  <span class="zen-label">Deep Focus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-spaces">
+            <div class="showcase-card">
+              <div class="showcase-text">
+                <span class="pill-mini">Atmosphere</span>
+                <h3 class="font-script">Curate your perfect environment</h3>
+                <p>
+                  Whether working from a quiet corner cafe, your home studio, or a sunlit park, bosq adapts with warm, natural color palettes designed for visual ease.
+                </p>
+                <ul class="checklist">
+                  <li><span>✓</span> High-contrast reading themes for bright sunlight</li>
+                  <li><span>✓</span> Organic midnight and warm amber dark modes</li>
+                  <li><span>✓</span> Fluid responsive layout across mobile and desktop</li>
+                </ul>
+              </div>
+              <div class="showcase-graphic spaces-visual">
+                <div class="palette-swatches">
+                  <div class="swatch s-1"><span>Amber</span></div>
+                  <div class="swatch s-2"><span>Sage</span></div>
+                  <div class="swatch s-3"><span>Indigo</span></div>
+                  <div class="swatch s-4"><span>Onyx</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-notes">
+            <div class="showcase-card">
+              <div class="showcase-text">
+                <span class="pill-mini">Journal & Clarity</span>
+                <h3 class="font-script">Express ideas with timeless grace</h3>
+                <p>
+                  Write freely without wrestling with formatting toolbars. bosq supports clean markdown, fluid handwriting, and effortless tagging.
+                </p>
+                <ul class="checklist">
+                  <li><span>✓</span> Instant search across all your entries</li>
+                  <li><span>✓</span> Elegant typography inspired by classic print design</li>
+                  <li><span>✓</span> Encrypted cloud backup with full local export</li>
+                </ul>
+              </div>
+              <div class="showcase-graphic notes-visual">
+                <div class="note-paper">
+                  <div class="note-line font-script">"Simplicity is the keynote of all true elegance."</div>
+                  <div class="note-meta">Recorded today at 8:30 AM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-sync">
+            <div class="showcase-card">
+              <div class="showcase-text">
+                <span class="pill-mini">Connectivity</span>
+                <h3 class="font-script">Everywhere you think</h3>
+                <p>
+                  Start an entry on your morning commute via your phone, continue on your tablet at lunch, and review on your desktop at night.
+                </p>
+                <ul class="checklist">
+                  <li><span>✓</span> Real-time peer-to-peer sync protocols</li>
+                  <li><span>✓</span> Zero lock-in: export to Markdown, PDF, or JSON anytime</li>
+                  <li><span>✓</span> Offline-first architecture</li>
+                </ul>
+              </div>
+              <div class="showcase-graphic sync-visual">
+                <div class="sync-devices">
+                  <div class="device-icon">📱 iPhone</div>
+                  <div class="sync-arrows">⇄</div>
+                  <div class="device-icon">💻 Mac & PC</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-testimonials" id="stories">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Community</span>
+          <h2 class="section-title font-script">Words from early adopters</h2>
+          <p class="section-subtitle">
+            See how thinkers, creators, and professionals find balance with bosq.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "bosq has replaced three chaotic apps on my phone. The Marck Script accents and gentle aesthetic give it an intimate, personal notebook feeling that nothing else matches."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">E</div>
+              <div>
+                <strong>Elena Rostova</strong>
+                <small>Creative Director</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "The speed and zero-friction experience is unmatched. I open it, capture my thought without a second of hesitation, and get right back to living in the moment."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div>
+                <strong>Murad Aliyev</strong>
+                <small>Product Engineer</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Privacy and peace of mind. Knowing my personal musings and projects are truly encrypted and not being fed to an ad algorithm is why I recommend bosq to everyone."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <strong>Sophie Martin</strong>
+                <small>Author & Essayist</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-faq" id="faq">
+      <div class="container faq-container">
+        <div class="section-header text-center">
+          <span class="section-tag">Have Questions?</span>
+          <h2 class="section-title font-script">Frequently asked questions</h2>
+          <p class="section-subtitle">
+            Everything you need to know about bosq, privacy, and getting started.
+          </p>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Which platforms are supported by bosq?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                bosq is available as a native app for iOS (iPhone & iPad) and Android, as well as a progressive web app accessible on desktop browsers directly via <strong>bosq.app</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Does bosq work offline?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Yes! bosq is built with an offline-first architecture. All your notes, spaces, and focus sessions remain fully accessible when you are disconnected. Everything automatically syncs securely when you return online.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>How is my data protected?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                We adhere to strict privacy-by-design principles. Your personal entries are encrypted locally on your device before syncing. We do not sell data to advertisers, run third-party trackers, or train public AI models on your notes.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>Can I export my data if I ever leave?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Absolutely. You have 100% ownership of your data. You can export everything at any time into open formats including clean Markdown, JSON, and PDF with a single tap.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download & Early Access CTA Banner -->
+    <section class="section section-cta" id="download">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-content text-center">
+            <span class="brand-sub font-script">Take the first step</span>
+            <h2 class="cta-title font-script">Begin your journey with bosq</h2>
+            <p class="cta-description">
+              Download the app or join our early access club to receive updates, exclusive themes, and invite codes.
+            </p>
+
+            <form class="email-form" id="waitlistForm">
+              <div class="input-group">
+                <input type="email" id="emailInput" placeholder="Enter your email address..." required>
+                <button type="submit" class="btn btn-primary">Join Early Access</button>
+              </div>
+              <p class="form-feedback" id="formFeedback"></p>
+            </form>
+
+            <div class="cta-badges">
+              <a href="#" class="store-badge" aria-label="App Store">
+                <div class="badge-inner">
+                  <span class="badge-sub">Available on the</span>
+                  <span class="badge-title">App Store</span>
+                </div>
+              </a>
+              <a href="#" class="store-badge" aria-label="Google Play">
+                <div class="badge-inner">
+                  <span class="badge-sub">GET IT ON</span>
+                  <span class="badge-title">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <span class="brand-name font-script">bosq</span>
+          </a>
+          <p class="footer-tagline">
+            Your mindful sanctuary in the digital age.
+          </p>
+          <p class="domain-tag">Hosted at <strong>bosq.app</strong></p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#showcase">Experience</a></li>
+              <li><a href="#download">Download</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal & Trust</h4>
+            <ul>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#terms">Terms of Service</a></li>
+              <li><a href="#security">Security</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="https://github.com/dobrygazon" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="mailto:contact@bosq.app">Contact Us</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> bosq. All rights reserved.</p>
+        <p class="footer-credit">Crafted with care for calm minds.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
