@@ -1,0 +1,21 @@
+{
+  "competitor": "SnapCalorie",
+  "domain": "snapcalorie.com",
+  "company": "PerceptionLabs, Inc.",
+  "founders": ["Wade Norris (ex-Google Lens)", "Scott Baron"],
+  "status": "Active (VC backed)",
+  "funding": "$2.0M Seed (Y Combinator W23, Accel, Index Ventures, Eric Roza)",
+  "estimated_users": "100,000+",
+  "business_model": "Freemium consumer app + B2B Developer API ($499/mo)",
+  "pricing_tiers": [
+    { "name": "Free Forever", "price": "$0 (up to 3 photo logs/day)" },
+    { "name": "Pro Annual", "price": "$79.99 - $149.00/year" },
+    { "name": "B2B API Tier", "price": "$499/month (10,000 API calls)" }
+  ],
+  "traffic_channels": [
+    "Tech press (TechCrunch, CVPR research, Y Combinator launch)",
+    "Organic search (free web meal planner tool at snapcalorie.com)",
+    "Developer referral and App Store search"
+  ],
+  "market_focus": "US tech early-adopters, fitness pros, healthtech developers"
+}

@@ -1,0 +1,21 @@
+{
+  "competitor": "Cal AI",
+  "domain": "calai.app",
+  "company": "Viral Development LLC",
+  "founders": ["Zach Yadegari", "Blake Anderson", "Henry Langmack", "Jake Castillo"],
+  "status": "Acquired by MyFitnessPal (March 2026)",
+  "funding": "Bootstrapped to $35M-$50M ARR prior to acquisition",
+  "estimated_users": "5,000,000+",
+  "business_model": "Freemium with hard paywall on AI camera",
+  "pricing_tiers": [
+    { "name": "Weekly", "price": "$2.99/week" },
+    { "name": "Monthly", "price": "$9.99 - $19.99/month" },
+    { "name": "Annual", "price": "$29.99 - $49.99/year" }
+  ],
+  "traffic_channels": [
+    "Viral short-form organic video (TikTok, Instagram Reels)",
+    "Paid user acquisition (Meta Ads, TikTok Ads, Apple Search Ads)",
+    "Word of mouth and App Store ASO"
+  ],
+  "market_focus": "US, UK, Canada, Australia, Global English"
+}

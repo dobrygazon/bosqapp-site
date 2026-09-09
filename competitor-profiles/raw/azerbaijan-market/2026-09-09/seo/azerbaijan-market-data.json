@@ -1,0 +1,31 @@
+{
+  "target_market": "Azerbaijan",
+  "territory_restriction": "Exclusive distribution in Azerbaijan",
+  "local_currency": "AZN",
+  "primary_languages": ["Azerbaijani (az)", "Russian (ru - bilingual demographic)"],
+  "top_app_store_keywords_az": [
+    "kalori",
+    "kalori saygaci",
+    "kalori hesablama",
+    "ariqlamaq",
+    "pehriz",
+    "yemek kalorisi",
+    "diyet",
+    "makro",
+    "bosq",
+    "bosq app"
+  ],
+  "competitor_hierarchy_in_azerbaijan": {
+    "free_incumbent": "FatSecret",
+    "lifestyle_paid_incumbent": "YAZIO",
+    "viral_ai_competitor": "Cal AI",
+    "offline_social_competitor": "Instagram/WhatsApp Dietitians (Dietoloqlar)",
+    "niche_early_ai": ["Caloris", "KKAL AI", "Nutix"]
+  },
+  "market_gaps": [
+    "No modern AI photo scanner natively in Azerbaijani",
+    "Zero recognition of authentic Azerbaijani national dishes",
+    "No localized AZN pricing tiers below 10 AZN/month",
+    "FatSecret is free but requires 15 minutes of manual Russian/Turkish database typing per day"
+  ]
+}
