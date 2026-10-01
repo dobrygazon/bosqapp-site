@@ -1,0 +1,50 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "@/assets/hero.jpg";
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 gap-8">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}
+      alt="bosq - Boşqabındakı yeməyin şəklini çək, kaloriləri anında öyrən"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      class="rounded-2xl shadow-2xl border border-slate-100"
+    />
+  </div>
+  <div>
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-6">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      🇦🇿 Azərbaycanın İlk Süni İntellektli Qida Skaneri
+    </div>
+    <h1
+      class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Boşqabının şəklini çək, qalanını <span class="text-emerald-600">bosq</span>-a burax.
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl leading-relaxed">
+      Tərəzidə qram-qram çəkməyə və cədvəllərdə axtarmağa son. Plov, dolma, qutab və ya salat — sadəcə fotosunu çək, bosq saniyələr içində kaloriləri, zülalları, yağları və karbohidratları hesablasın.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#cta"
+        class="flex gap-2 items-center justify-center">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-zap" />
+        Erkən Giriş Qazan
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        href="#features"
+        class="flex gap-2 items-center justify-center">
+        <Icon class="text-black w-4 h-4" name="bx:bxs-dish" />
+        Xüsusiyyətlər
+      </Link>
+    </div>
+  </div>
+</main>

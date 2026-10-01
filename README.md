@@ -1,87 +1,44 @@
-﻿# bosq.app — Landing Page & Setup Guide
+# bosq.app — AI Qida və Kalori İzləyicisi
 
-This repository contains the landing page for **bosq** (`bosq.app`), designed with a clean, mindful aesthetic featuring Google Fonts' **Marck Script** for branding and titles, and optimized for instant hosting on **GitHub Pages** with custom domain routing.
+Azərbaycan mətbəxini anlayan ilk süni intellekt dəstəkli qida və kalori izləyicisi **bosq** (`bosq.app`) üçün rəsmi veb-sayt.
 
----
-
-## 🚀 Quick Start (Local Preview)
-
-You can preview the website locally using any static file server:
-
-```powershell
-# Using npx serve (recommended)
-npx serve .
-
-# Or using Python built-in server
-python -m http.server 8000
-```
-Then open `http://localhost:8000` (or `http://localhost:3000`) in your browser.
+Sayt [Astroship](https://github.com/surjithctly/astroship) mövzusu, **Astro v5** və **Tailwind CSS v4** ilə yenidən qurulmuşdur.
 
 ---
 
-## 🌐 Step 1: Namecheap DNS Configuration for `bosq.app`
+## 🚀 Yerli Mühitdə Başlatma (Local Development)
 
-Follow these steps to connect your domain purchased on Namecheap to GitHub Pages:
+```bash
+# Asılılıqları quraşdırın
+npm install
 
-1. Log in to your [Namecheap Account Dashboard](https://ap.www.namecheap.com/).
-2. Go to **Domain List** and click **Manage** next to `bosq.app`.
-3. In the **Domain** tab, ensure **Nameservers** is set to **Namecheap BasicDNS** (click the green checkmark to save if changed).
-4. Go to the **Advanced DNS** tab.
-5. In the **Host Records** section, delete any existing default parking records (e.g. ParkingPage or redirect records), and add the following:
+# İnkişaf serverini işə salın
+npm run dev
 
-| Type | Host | Value | TTL |
-| :--- | :--- | :--- | :--- |
-| **A Record** | `@` | `185.199.108.153` | Automatic |
-| **A Record** | `@` | `185.199.109.153` | Automatic |
-| **A Record** | `@` | `185.199.110.153` | Automatic |
-| **A Record** | `@` | `185.199.111.153` | Automatic |
-| **CNAME Record** | `www` | `<your-github-username>.github.io.` | Automatic |
+# Saytı istehsal (production) üçün qurun
+npm run build
 
-> ⚠️ Replace `<your-github-username>` with your actual GitHub username (e.g., `dobrygazon.github.io.`). Keep the trailing dot if Namecheap adds it.
-
----
-
-## 📦 Step 2: Push to GitHub
-
-Initialize the git repository and push to your GitHub account:
-
-```powershell
-git init
-git add .
-git commit -m "feat: initial bosq.app landing page with Marck Script branding and GitHub Pages config"
-git branch -M main
-
-# If you create a new repository on GitHub (e.g. named bosqapp or bosqapp-site):
-git remote add origin https://github.com/<your-username>/bosqapp-site.git
-git push -u origin main
+# Qurulmuş saytı önizləyin
+npm run preview
 ```
 
 ---
 
-## ⚙️ Step 3: Enable GitHub Pages
+## 📂 Layihə Strukturu
 
-1. Open your repository on GitHub.
-2. Go to **Settings** → **Pages** (in the left sidebar).
-3. Under **Build and deployment**:
-   - **Source**: Select **Deploy from a branch**.
-   - **Branch**: Select `main` and folder `/ (root)`.
-   - Click **Save**.
-   *(Alternatively, select **GitHub Actions** to use the automated `.github/workflows/deploy.yml` workflow included in this repo).*
-4. Under **Custom domain**:
-   - Verify `bosq.app` is entered (it will automatically read from the `CNAME` file in the repo).
-   - Click **Save**.
-5. Once DNS propagation finishes (typically 5–30 minutes), check the box **Enforce HTTPS**.
+- `src/layouts/Layout.astro` — Ümumi sayt strukturu, SEO, meta teqlər və OpenGraph məlumatları
+- `src/components/navbar/navbar.astro` — Naviqasiya menyusu və brend loqosu
+- `src/components/hero.astro` — Əsas təqdimat bölməsi və süni intellekt skan illüstrasiyası
+- `src/components/features.astro` — bosq-un əsas 6 üstünlüyü və funksionallıqları
+- `src/components/logos.astro` — Dəstəklənən mobil platformalar (iOS, Android)
+- `src/components/pricing.astro` — Pulsuz və Pro (Aylıq & İllik) abunəlik kartları
+- `src/components/cta.astro` — Erkən giriş üçün çağırış bölməsi
+- `src/components/footer.astro` — Müəllif hüquqları və alt naviqasiya
 
 ---
 
-## 🎨 Design & Fonts
+## 🌐 GitHub Pages və Domen Quraşdırması
 
-- **Title & Brand Font**: [Marck Script](https://fonts.google.com/specimen/Marck+Script) (Cursive, elegant, handwritten aesthetic)
-- **Body / Interface Font**: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (Clean, geometric, high legibility)
-- **Features**:
-  - Dark / Light mode toggle with local storage persistence.
-  - Interactive device preview mockup.
-  - Interactive feature tabs (Focus Mode, Inspiring Spaces, Deep Reflection, Universal Sync).
-  - Smooth FAQ accordion.
-  - Responsive mobile drawer navigation.
-  - Early access waitlist form with live visual validation.
+Sayt `.github/workflows/deploy.yml` vasitəsilə avtomatik olaraq **GitHub Pages** üzərində `bosq.app` xüsusi domeni ilə yayımlanır:
+1. Hər bir `git push` əməliyyatında Astro avtomatik olaraq `dist/` qovluğuna yığılır.
+2. `public/CNAME` faylı `bosq.app` ünvanını qoruyur.

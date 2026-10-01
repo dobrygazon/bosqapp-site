@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "1 Foto ilə Ani Analiz",
+    description:
+      "Kameranı boşqabına tut. Süni intellekt yeməkləri, inqrediyentləri və porsiya həcmini 2 saniyə içində hesablasın.",
+    icon: "bx:bxs-camera",
+  },
+  {
+    title: "Milli Mətbəx Dəstəyi",
+    description:
+      "Xarici tətbiqlərin tanımadığı plov, dolma, qutab, dovğa, piti və ev yeməklərini dərhal tanıyan xüsusi süni intellekt modeli.",
+    icon: "bx:bxs-badge-check",
+  },
+  {
+    title: "Dəqiq Makro və Zülal Balansı",
+    description:
+      "Təkcə kaloriləri deyil; zülal, faydalı yağlar və karbohidratları fərdi gündəlik normanla müqayisəli şəkildə izlə.",
+    icon: "bx:bxs-pie-chart-alt-2",
+  },
+  {
+    title: "Mətbəx Tərəzisinə Ehtiyac Yoxdur",
+    description:
+      "Hər tikəni qram-qram çəkmək və cədvəllərdə axtarmaq zəhmətindən azad ol. Süni intellekt vizual həcmi dərhal qiymətləndirir.",
+    icon: "bx:bxs-dish",
+  },
+  {
+    title: "Restoran və Qonaqlıqda Rahatlıq",
+    description:
+      "Dostlarınla kafedə, restoranda və ya qonaqlıqda olarkən cəmi 1 saniyəlik şəkillə pəhrizinə sadiq qal.",
+    icon: "bx:bxs-coffee",
+  },
+  {
+    title: "Fərdi Sağlamlıq Hədəfləri",
+    description:
+      "İstər arıqlamaq, istər çəkini qorumaq, istərsə də idman üçün əzələ kütləsi artırmaq — bosq sənin ritminə uyğunlaşır.",
+    icon: "bx:bxs-bullseye",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0" id="features">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Sağlam formanın ən rahat və zəhmətsiz yolu
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Azərbaycan mətbəxini anlayan və həyat tərzinizə uyğunlaşan ilk süni intellektli qida və kalori köməkçisi.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0 flex items-center justify-center">
+          <Icon class="text-white w-4 h-4" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

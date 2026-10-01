@@ -1,0 +1,86 @@
+---
+import Container from "@/components/container.astro";
+import Cta from "@/components/cta.astro";
+import Features from "@/components/features.astro";
+import Hero from "@/components/hero.astro";
+import Logos from "@/components/logos.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import PricingCard from "@/components/pricing.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const pricing = [
+  {
+    name: "Pulsuz Başlanğıc",
+    price: "0 ₼",
+    popular: false,
+    features: [
+      "Gündəlik 3 AI foto skanı",
+      "Ani kalori və qida dəyəri hesabı",
+      "Zülal, yağ və karbohidrat bölgüsü",
+      "Milli Azərbaycan yeməklərinin tanınması",
+      "Gündəlik kalori balansı izləməsi",
+    ],
+    button: {
+      text: "Erkən Giriş Al",
+      link: "#cta",
+    },
+  },
+  {
+    name: "bosq Pro (Aylıq)",
+    price: "4.99 ₼ / ay",
+    popular: true,
+    features: [
+      "Limitsiz AI foto skanı",
+      "Bakıda cəmi 1 fincan kofe qiymətinə",
+      "Dəqiq porsiya və qram qiymətləndirməsi",
+      "Ətraflı zülal, lif və mikronutrient analizi",
+      "Prioritet süni intellekt emal sürəti",
+      "Həftəlik və aylıq tərəqqi hesabatları",
+    ],
+    button: {
+      text: "Erkən Giriş Al",
+      link: "#cta",
+    },
+  },
+  {
+    name: "bosq Pro (İllik)",
+    price: "39.99 ₼ / il",
+    popular: false,
+    features: [
+      "Bütün Pro üstünlükləri",
+      "İllik abunəlikdə 33% qənaət (ayda 3.33 ₼)",
+      "Fərdi hədəf və pəhriz tənzimləmələri",
+      "Yeni funksiyalara ilk giriş imtiyazı",
+      "Prioritet 24/7 müştəri dəstəyi",
+      "Sağlam qidalanma və formaya düşmə bələdçiləri",
+    ],
+    button: {
+      text: "Erkən Giriş Al",
+      link: "#cta",
+    },
+  },
+];
+---
+
+<Layout title="Boşqabının Şəklini Çək, Kaloriləri Anında Öyrən">
+  <Container>
+    <Hero />
+    <Features />
+    <Logos />
+    <div id="pricing" class="mt-24">
+      <Sectionhead>
+        <Fragment slot="title">Sadə və Şəffaf Qiymətlər</Fragment>
+        <Fragment slot="desc">
+          Xarici valyutada gizli ödənişlər yoxdur. Yerli manatla (AZN), hər kəs üçün əlçatan.
+        </Fragment>
+      </Sectionhead>
+      <div
+        class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+        {pricing.map((item) => <PricingCard plan={item} />)}
+      </div>
+    </div>
+    <div id="cta">
+      <Cta />
+    </div>
+  </Container>
+</Layout>
