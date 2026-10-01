@@ -1,22 +1,35 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "@/assets/hero.jpg";
+import heroImage from "@/assets/app-screenshot.jpg";
 import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 gap-8">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="bosq - Boşqabındakı yeməyin şəklini çək, kaloriləri anında öyrən"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-      class="rounded-2xl shadow-2xl border border-slate-100"
-    />
+  class="grid lg:grid-cols-2 place-items-center pt-12 pb-8 md:pt-16 md:pb-24 gap-12">
+  <div class="py-4 flex justify-center w-full lg:order-last">
+    <div class="relative mx-auto max-w-[280px] sm:max-w-[320px] lg:max-w-[340px] w-full">
+      <!-- Glow effect -->
+      <div
+        class="absolute -inset-4 bg-gradient-to-tr from-emerald-500/20 via-amber-500/10 to-emerald-500/15 rounded-[3rem] blur-2xl -z-10">
+      </div>
+
+      <!-- Phone frame -->
+      <div
+        class="relative bg-slate-900 p-2.5 sm:p-3 rounded-[2.8rem] sm:rounded-[3rem] shadow-2xl shadow-slate-900/30 border-4 border-slate-800">
+        <!-- Screen container -->
+        <div class="overflow-hidden rounded-[2.2rem] sm:rounded-[2.4rem] bg-stone-50">
+          <Picture
+            src={heroImage}
+            alt="bosq tətbiqinin interfeysi — Süni intellektli kalori və makro izləyicisi"
+            widths={[320, 640]}
+            sizes="(max-width: 640px) 280px, 340px"
+            loading="eager"
+            class="w-full h-auto block"
+          />
+        </div>
+      </div>
+    </div>
   </div>
   <div>
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-6">
@@ -32,7 +45,7 @@ import { Icon } from "astro-icon/components";
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
-        href="#cta"
+        href="/#cta"
         class="flex gap-2 items-center justify-center">
         <Icon class="text-white w-5 h-5" name="bx:bxs-zap" />
         Erkən Giriş Qazan
@@ -40,7 +53,7 @@ import { Icon } from "astro-icon/components";
       <Link
         size="lg"
         style="outline"
-        href="#features"
+        href="/#features"
         class="flex gap-2 items-center justify-center">
         <Icon class="text-black w-4 h-4" name="bx:bxs-dish" />
         Xüsusiyyətlər
