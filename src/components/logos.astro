@@ -4,19 +4,22 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div class="mt-24" id="platforms">
-  <h2 class="text-center text-slate-500 font-medium">Tezliklə sevdiyiniz mobil platformalarda</h2>
+  <h2 class="text-center text-slate-500 font-medium">Mobil platformalar</h2>
   <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap text-slate-700">
-    <div class="flex items-center gap-3 font-semibold text-lg hover:text-black transition">
-      <Icon class="size-8 md:size-10 text-black" name="simple-icons:apple" />
+    <a
+      href="https://apps.apple.com/in/app/bo%C5%9Fqapp/id6811141769"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-3 font-semibold text-lg text-slate-800 hover:text-black transition group">
+      <Icon class="size-8 md:size-10 text-black group-hover:scale-105 transition-transform" name="simple-icons:apple" />
       <span>iOS (App Store)</span>
-    </div>
-    <div class="flex items-center gap-3 font-semibold text-lg hover:text-black transition">
-      <Icon class="size-8 md:size-10 text-emerald-600" name="simple-icons:googleplay" />
-      <span>Android (Google Play)</span>
-    </div>
-    <div class="flex items-center gap-3 font-semibold text-lg hover:text-black transition">
-      <Icon class="size-8 md:size-10 text-green-500" name="simple-icons:android" />
-      <span>APK Birbaşa Yükləmə</span>
+    </a>
+    <div class="flex items-center gap-3 font-medium text-lg text-slate-400 cursor-default select-none">
+      <Icon class="size-8 md:size-10 text-slate-400" name="simple-icons:googleplay" />
+      <div class="flex items-center gap-2">
+        <span>Android (Google Play)</span>
+        <span class="text-xs font-normal px-2 py-0.5 bg-slate-100 text-slate-400 rounded-full border border-slate-200">Tezliklə</span>
+      </div>
     </div>
   </div>
 </div>
