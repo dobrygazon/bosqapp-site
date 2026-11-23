@@ -1,0 +1,3 @@
+# A consent record stores the SHA-256 of these exact bytes. Keep line endings
+# fixed so a checkout on any machine hashes the same.
+src/consent/*.md text eol=lf

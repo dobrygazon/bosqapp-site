@@ -1,0 +1,21 @@
+---
+import ConsentDocument from "@/components/consent-document.astro";
+import { consentVersions, type ConsentVersion } from "@/consent/index";
+
+// One permalink per version. Consent records point here, so a version that
+// has been published keeps its page for good.
+export function getStaticPaths() {
+  return consentVersions.map((document) => ({
+    params: { version: document.slug },
+    props: { document },
+  }));
+}
+
+interface Props {
+  document: ConsentVersion;
+}
+
+const { document } = Astro.props;
+---
+
+<ConsentDocument document={document} />
