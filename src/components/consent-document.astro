@@ -1,0 +1,108 @@
+---
+import Container from "@/components/container.astro";
+import Layout from "@/layouts/Layout.astro";
+import {
+  consentVersions,
+  latestConsent,
+  type ConsentVersion,
+} from "@/consent/index";
+
+interface Props {
+  document: ConsentVersion;
+}
+
+const { document } = Astro.props;
+const { Content } = document;
+const isLatest = document.slug === latestConsent.slug;
+const newestFirst = [...consentVersions].reverse();
+---
+
+<Layout
+  title="Fərdi məlumatların işlənməsinə razılıq"
+  description="Boşqapp tətbiqində fərdi məlumatların və sağlamlıqla bağlı məlumatların işlənməsinə razılığın tam mətni, versiyası və əvvəlki versiyaları.">
+  <Container>
+    <div class="max-w-4xl mx-auto py-10 sm:py-16">
+      <div class="mb-8">
+        <a
+          href="/"
+          class="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 hover:text-emerald-700 transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          Ana səhifəyə qayıt
+        </a>
+      </div>
+
+      <div
+        class="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-10 md:p-12 shadow-xs">
+        <span
+          class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-6">
+          Hüquqi sənəd
+        </span>
+
+        {
+          !isLatest && (
+            <div class="mb-8 bg-amber-50/70 border border-amber-200 rounded-xl p-5 text-sm text-amber-900">
+              Bu, sənədin əvvəlki versiyasıdır.{" "}
+              <a href="/consent/" class="underline font-semibold">
+                Cari versiyaya ({latestConsent.version}) keçin
+              </a>
+              .
+            </div>
+          )
+        }
+
+        <article
+          class="prose prose-slate prose-headings:font-bold prose-headings:text-slate-900 prose-h1:text-3xl prose-h1:sm:text-4xl prose-h1:font-extrabold prose-h1:tracking-tight prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-3 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-slate-900 prose-a:text-emerald-600 max-w-none">
+          <Content />
+        </article>
+
+        <section class="mt-12 border-t border-slate-200 pt-8">
+          <h2 class="text-lg font-bold text-slate-900">Bu versiyanın izi</h2>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Tətbiqdə verilən razılıq bu versiyanın dəqiq mətninə bağlanır.
+            Aşağıdakı SHA-256 izi
+            <a
+              href={`/consent/${document.slug}.txt`}
+              class="text-emerald-600 hover:text-emerald-700 underline font-medium"
+              >mətn faylından</a
+            > hesablanıb.
+          </p>
+          <p
+            class="mt-3 text-xs font-mono text-slate-700 bg-slate-50 border border-slate-200 rounded-lg p-3 break-all">
+            {document.sha256}
+          </p>
+        </section>
+
+        <section class="mt-10" id="versiyalar">
+          <h2 class="text-lg font-bold text-slate-900">Bütün versiyalar</h2>
+          <ul class="mt-3 space-y-2 text-sm text-slate-600">
+            {
+              newestFirst.map((item) => (
+                <li>
+                  <a
+                    href={`/consent/${item.slug}/`}
+                    class="text-emerald-600 hover:text-emerald-700 underline font-medium">
+                    Versiya {item.version}
+                  </a>
+                  {" · "}
+                  {item.updated}
+                  {item.slug === latestConsent.slug && " · cari versiya"}
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+    </div>
+  </Container>
+</Layout>
